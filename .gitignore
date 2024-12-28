@@ -1,0 +1,25 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+venv/
+.env
+*.sqlite3
+*.log
+
+# Django
+*.db
+*.db-journal
+
+# Jupyter
+.ipynb_checkpoints/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Mac
+.DS_Store
