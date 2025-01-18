@@ -1,0 +1,130 @@
+/* Ogólne style */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fc;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+/* Kontener */
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Nagłówki */
+h1 {
+    text-align: center;
+    color: #34495e;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+/* Formularze */
+.form {
+    margin-bottom: 30px;
+}
+
+input[type="text"] {
+    width: calc(100% - 24px);
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+button {
+    display: inline-block;
+    background: #3498db;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+/* Wyniki analizy */
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Kolory wyników */
+.safe-result {
+    background-color: #d4edda; /* Zielone tło */
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+.phishing-result {
+    background-color: #f8d7da; /* Czerwone tło */
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+/* Brak wyników */
+.no-results {
+    color: #e74c3c;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Lista wyników wyszukiwania */
+.results {
+    list-style: none;
+    padding: 0;
+}
+
+.result-item {
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #dcdde1;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.result-item:hover {
+    background-color: #ecf0f1;
+}
+
+/* Responsywność */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+}

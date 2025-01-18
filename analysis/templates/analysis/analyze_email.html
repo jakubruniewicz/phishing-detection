@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Analysis and Search</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Email Analysis</h1>
+        <form method="post" class="form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn">Analyze</button>
+        </form>
+        {% if result %}
+            <div class="result">
+                <p><strong>Result:</strong> {{ result }}</p>
+            </div>
+        {% endif %}
+
+        <h1>Search For Phishing Senders</h1>
+        <form method="get" class="form">
+            <input type="text" name="q" placeholder="Enter sender name" value="{{ query }}" class="input">
+            <button type="submit" class="btn">Search</button>
+        </form>
+        {% if results %}
+            <ul class="results">
+                {% for sender in results %}
+                    <li class="result-item">{{ sender.name }}</li>
+                {% endfor %}
+            </ul>
+        {% elif query %}
+            <p class="no-results">No results found.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
